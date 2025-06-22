@@ -231,8 +231,8 @@ img {
     justify-self: center;
     max-width: 400px;
     opacity: .1;
-    animation: fadeIn 2s ease-out forwards;
-    filter: drop-shadow(-6px -6px 6px rgba(60, 161, 255, .35));
+    animation: fadeIn 2s ease-out forwards, flickerShadow 2s infinite;
+    filter: drop-shadow(-6px -6px 4px rgba(60, 161, 255, .35));
     transform: translateZ(0);
 }
 
@@ -358,13 +358,6 @@ textarea {
     overflow: hidden;
 }
 
-dotlottie-player {
-    transform: translateZ(0);
-    will-change: transform, filter, opacity;
-    backface-visibility: hidden;
-    contain: strict;
-}
-
 .hero-bg-animation {
     position: absolute;
     top: 0;
@@ -374,16 +367,9 @@ dotlottie-player {
     z-index: 0;
     pointer-events: none;
     object-fit: cover;
-    opacity: 0.1;
+    opacity: .1;
     animation: fadeIn 2s ease-in-out forwards;
-    filter: drop-shadow(0 0 20px rgb(60, 161, 255));
-    
-    /* FORCE GPU RENDERING ON MOBILE */
-    transform: translate3d(0, 0, 0); /* or translateZ(0) */
-    will-change: transform, opacity, filter;
-    backface-visibility: hidden;
-    -webkit-transform-style: preserve-3d;
-    contain: paint;
+    filter: drop-shadow(0px 0px 20px rgb(60, 161, 255));
 }
 
 .hero-content {
@@ -398,18 +384,6 @@ dotlottie-player {
     height: 100%;
     padding: 0 2rem;
     text-shadow: -10px 10px 15px rgba(0, 0, 0, .5);
-}
-
-@keyframes gpu-tickle {
-  0% { opacity: 1; }
-  100% { opacity: 0.99; }
-}
-
-.force-repaint {
-  animation: gpu-tickle 1s infinite;
-  pointer-events: none;
-  opacity: 0;
-  position: absolute;
 }
 
 /* ! Scroll Scaling */
