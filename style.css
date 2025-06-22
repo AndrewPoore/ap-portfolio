@@ -1,0 +1,399 @@
+/* ! Base Styles */
+@import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Expanded:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+html {
+    margin: 0;
+    color: #f7f7f7;
+    background-color: rgb(22, 22, 22);
+    font-family: "Nunito", sans-serif;
+    scrollbar-color: rgb(60, 161, 255) rgb(22, 22, 22);
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    max-width: 1200px;
+    height: 100px;
+    display: flex;
+    margin: auto;
+}
+
+nav {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    grid-template-columns: repeat(3, 1fr);
+    letter-spacing: 3px;
+}
+
+nav a {
+    color: #f7f7f7;
+    text-decoration: none;
+}
+
+nav a:active {
+    color: rgb(60, 161, 255);
+}
+
+nav>a {
+    margin-left: 1.5em;
+}
+
+span {
+    margin: auto auto auto 1.5em;
+}
+
+svg {
+    max-width: 64px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.menu-links {
+    margin: auto 1.5em auto auto;
+    padding: 0;
+    text-align: right;
+}
+
+.menu-padding {
+    padding-right: 1em;
+}
+
+.st0 {
+    display: none;
+    fill: none;
+    stroke: #000000;
+    stroke-width: 30;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+}
+
+.st1 {
+    fill: none;
+    stroke: #000000;
+    stroke-width: 30;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+}
+
+.st2 {
+    fill: none;
+    stroke: #f7f7f7;
+    stroke-width: 60;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-miterlimit: 10;
+    transition-duration: .25s;
+}
+
+.st3 {
+    fill: #f7f7f7;
+}
+
+svg {
+    transition-duration: .25s;
+}
+
+svg:hover {
+    cursor: pointer;
+    transform: scale(1.5);
+    transition: transform .25s ease;
+}
+
+svg:hover .st2 {
+    stroke: rgb(60, 161, 255);
+    transition-duration: .25s;
+}
+
+.menu-item:hover {
+    color: rgb(60, 161, 255);
+    transition-duration: .25s;
+}
+
+#monogram {
+    display: flex;
+}
+
+main {
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.h1 {
+    width: 100%;
+}
+
+/*! Index */
+#cta-btn {
+    background-color: rgb(60, 161, 255);
+    color: rgb(22, 22, 22);
+    text-decoration: none;
+    padding: 1em 2em;
+    border-style: none;
+    border-radius: 30px;
+    font-family: "Nunito", sans-serif;
+    font-weight: bold;
+}
+
+#cta-btn:hover {
+    cursor: pointer;
+    scale: 1.1;
+    transition-duration: .25s;
+}
+
+#cta-btn:active {
+    scale: 1;
+    transition-duration: .25s;
+}
+
+#hero {
+    min-height: 50vh;
+    width: 100%;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* ! Work */
+img {
+    max-width: 100%;
+}
+
+.gallery {
+    padding: 1.5em;
+}
+
+.gallery video {
+    max-width: 100%;
+    pointer-events: none;
+}
+
+.gallery a {
+    color: #f7f7f7;
+}
+
+.gallery a:first-child {
+    margin-top: 0;
+}
+
+.gallery a:last-child {
+    margin-bottom: 0;
+}
+
+.gallery p {
+    max-width: 700px;
+    margin-bottom: 0;
+}
+
+.gallery h3 {
+    margin-top: 0;
+}
+
+.card {
+    background-color: rgb(30, 30, 30);
+    margin: 1em 0;
+    padding: 1.5em;
+    border-radius: 10px;
+    box-shadow: -8px 8px 8px rgba(0, 0, 0, 0.25);
+}
+
+.card img {
+    border-radius: 10px;
+}
+
+.card a:active {
+    color: rgb(60, 161, 255);
+}
+
+/* ! About */
+.about-ctn {
+    max-width: 650px;
+    margin: 0 2em;
+}
+
+.about {
+    display: flex;
+    justify-self: center;
+}
+
+.portrait {
+    display: flex;
+    justify-self: center;
+    max-width: 400px;
+    opacity: .1;
+    animation: fadeIn 2s ease-out forwards, flickerShadow 2s infinite;
+    filter: drop-shadow(-6px -6px 4px rgba(60, 161, 255, .35));
+    transform: translateZ(0);
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes flickerShadow {
+    0% {
+        filter: drop-shadow(-6px -6px 4px rgba(60, 161, 255, 0.25));
+    }
+
+    10% {
+        filter: drop-shadow(-5px -7px 6px rgba(60, 161, 255, 0.3));
+    }
+
+    20% {
+        filter: drop-shadow(-7px -5px 5px rgba(60, 161, 255, 0.2));
+    }
+
+    30% {
+        filter: drop-shadow(-4px -6px 4px rgba(60, 161, 255, 0.3));
+    }
+
+    40% {
+        filter: drop-shadow(-6px -8px 6px rgba(60, 161, 255, 0.3));
+    }
+
+    50% {
+        filter: drop-shadow(-5px -4px 3px rgba(60, 161, 255, 0.15));
+    }
+
+    60% {
+        filter: drop-shadow(-6px -7px 5px rgba(60, 161, 255, 0.25));
+    }
+
+    70% {
+        filter: drop-shadow(-7px -6px 6px rgba(60, 161, 255, 0.3));
+    }
+
+    80% {
+        filter: drop-shadow(-5px -5px 4px rgba(60, 161, 255, 0.2));
+    }
+
+    90% {
+        filter: drop-shadow(-6px -8px 6px rgba(60, 161, 255, 0.3));
+    }
+
+    100% {
+        filter: drop-shadow(-6px -6px 4px rgba(60, 161, 255, 0.25));
+    }
+}
+
+/* ! Contact Page */
+form {
+    max-width: 400px;
+    margin: 1em auto;
+    background-color: rgb(30, 30, 30);
+    padding: 1.5em;
+    border-radius: 10px;
+    box-shadow: -8px 8px 8px rgba(0, 0, 0, 0.25);
+}
+
+.form-ctn {
+    margin: 0 1em;
+}
+
+form,
+.input {
+    display: flex;
+    flex-direction: column;
+}
+
+form input,
+textarea {
+    background-color: #f7f7f7;
+    border-style: none;
+    color: rgb(22, 22, 22);
+    font-family: "Nunito", sans-serif;
+    border-radius: 3px;
+    padding: .5em;
+}
+
+form input,
+textarea {
+    outline-color: rgb(60, 161, 255);
+}
+
+.input,
+#contact-btn {
+    margin: 1em 0;
+}
+
+#contact-btn {
+    max-width: 80px;
+    text-align: center;
+    padding: .5em;
+    border-radius: 3px;
+    border-style: none;
+    color: #f7f7f7;
+    background-color: rgb(60, 161, 255);
+    transition-duration: .3s;
+}
+
+#contact-btn:hover {
+    cursor: pointer;
+    scale:1.1;
+    transition-duration: .3s;
+}
+
+.thanks {
+    max-width: 1000px;
+    padding: 1em;
+}
+
+/* ! Hero Section */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+}
+
+.hero-bg-animation {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+    object-fit: cover;
+    opacity: .1;
+    animation: fadeIn 2s ease-in-out forwards;
+    filter: drop-shadow(0px 0px 20px rgb(60, 161, 255));
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: #f7f7f7;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 0 2rem;
+    text-shadow: -10px 10px 15px rgba(0, 0, 0, .5);
+}
+
+/* ! Scroll Scaling */
+.card {
+    transform: scale(0.9);
+    opacity: 0.7;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.card.in-view {
+    transform: scale(1);
+    opacity: 1;
+}
