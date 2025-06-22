@@ -383,6 +383,7 @@ dotlottie-player {
     will-change: transform, opacity, filter;
     backface-visibility: hidden;
     -webkit-transform-style: preserve-3d;
+    contain: paint;
 }
 
 .hero-content {
@@ -397,6 +398,18 @@ dotlottie-player {
     height: 100%;
     padding: 0 2rem;
     text-shadow: -10px 10px 15px rgba(0, 0, 0, .5);
+}
+
+@keyframes gpu-tickle {
+  0% { opacity: 1; }
+  100% { opacity: 0.99; }
+}
+
+.force-repaint {
+  animation: gpu-tickle 1s infinite;
+  pointer-events: none;
+  opacity: 0;
+  position: absolute;
 }
 
 /* ! Scroll Scaling */
