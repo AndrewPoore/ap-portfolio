@@ -47,7 +47,8 @@ span {
 }
 
 svg {
-    max-width: 64px;
+    width: 64px;
+    display: block;
     height: auto;
     margin: 0 auto;
 }
