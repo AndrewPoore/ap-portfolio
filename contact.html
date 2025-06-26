@@ -67,23 +67,24 @@
 
     <script>
         const message = "Design is a conversation. This is where it starts.";
-        const typedContent = document.getElementById("typed-content");
-        const cursor = document.getElementById("cursor");
-        let index = 0;
-        const speed = 80;
+const typedContent = document.getElementById("typed-content");
+const cursor = document.getElementById("cursor");
+let index = 0;
+const speed = 80;
 
-        function type() {
-            if (index < message.length) {
-                typedContent.textContent += message.charAt(index);
-                index++;
-                setTimeout(type, speed);
-            } else {
-                // Optional: stop cursor blinking after typing
-                // cursor.style.animation = "none";
-            }
-        }
+function type() {
+  if (index < message.length) {
+    typedContent.textContent += message.charAt(index);
+    index++;
+    setTimeout(type, speed);
+  } else {
+    // Typing done, cursor stays visible and blinking instantly
+    // If you want to stop blinking immediately, do:
+    // cursor.style.animation = "none";
+  }
+}
 
-        type();
+type();
     </script>
 
 </body>

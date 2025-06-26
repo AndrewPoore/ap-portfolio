@@ -233,7 +233,7 @@ img {
     max-width: 400px;
     opacity: .1;
     animation: fadeIn 2s ease-out forwards, flickerShadow 2s infinite;
-    filter: drop-shadow(-6px -6px 4px rgba(60, 161, 255, .35));
+    filter: drop-shadow(-10px -10px 8px rgba(60, 161, 255, .35));
     transform: translateZ(0);
 }
 
@@ -243,7 +243,7 @@ img {
     }
 }
 
-@keyframes flickerShadow {
+/* @keyframes flickerShadow {
     0% {
         filter: drop-shadow(-6px -6px 4px rgba(60, 161, 255, 0.25));
     }
@@ -287,13 +287,12 @@ img {
     100% {
         filter: drop-shadow(-6px -6px 4px rgba(60, 161, 255, 0.25));
     }
-}
+} */
 
 /* ! Contact Page */
 .typing {
     font-family: monospace, monospace;
     font-size: 0;
-    /* kills inline spacing */
     max-width: 600px;
     text-align: left;
     white-space: normal;
@@ -304,7 +303,6 @@ img {
 #typed-content,
 #cursor {
     font-size: 2rem;
-    /* reset font size */
     vertical-align: bottom;
     margin: 0;
 }
