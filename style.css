@@ -370,7 +370,6 @@ textarea {
     object-fit: cover;
     opacity: .1;
     animation: fadeIn 2s ease-in-out forwards;
-    filter: drop-shadow(0px 0px 20px rgb(60, 161, 255));
 }
 
 .hero-content {
