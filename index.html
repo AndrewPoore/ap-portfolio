@@ -136,22 +136,22 @@
 
     <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
     <script>
-  const cards = document.querySelectorAll('.card');
+        const cards = document.querySelectorAll('.card');
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('in-view');
-      } else {
-        entry.target.classList.remove('in-view');
-      }
-    });
-  }, {
-    threshold: 0.6 // Trigger when 60% of the card is in view
-  });
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('in-view');
+                } else {
+                    entry.target.classList.remove('in-view');
+                }
+            });
+        }, {
+            threshold: 0.75 // Trigger when 75% of the card is in view
+        });
 
-  cards.forEach(card => observer.observe(card));
-</script>
+        cards.forEach(card => observer.observe(card));
+    </script>
 </body>
 
 </html>

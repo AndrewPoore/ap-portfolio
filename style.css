@@ -290,8 +290,50 @@ img {
 }
 
 /* ! Contact Page */
+.typing {
+    font-family: monospace, monospace;
+    font-size: 0;
+    /* kills inline spacing */
+    max-width: 600px;
+    text-align: left;
+    white-space: normal;
+    overflow-wrap: break-word;
+    display: inline-block;
+}
+
+#typed-content,
+#cursor {
+    font-size: 2rem;
+    /* reset font size */
+    vertical-align: bottom;
+    margin: 0;
+}
+
+#cursor {
+    display: inline;
+    animation: blink-caret 1s step-start infinite;
+    user-select: none;
+    white-space: nowrap;
+    color: rgb(60, 161, 255);
+}
+
+@keyframes blink-caret {
+
+    0%,
+    50% {
+        opacity: 1;
+    }
+
+    51%,
+    100% {
+        opacity: 0;
+    }
+}
+
+
+
 form {
-    max-width: 400px;
+    max-width: 500px;
     margin: 1em auto;
     background-color: rgb(30, 30, 30);
     padding: 1.5em;
@@ -301,6 +343,11 @@ form {
 
 .form-ctn {
     margin: 0 1em;
+}
+
+form,
+#contact-btn {
+    font-size: 24px;
 }
 
 form,
@@ -315,6 +362,7 @@ textarea {
     border-style: none;
     color: rgb(22, 22, 22);
     font-family: "Nunito", sans-serif;
+    font-size: 20px;
     border-radius: 3px;
     padding: .5em;
 }
@@ -330,7 +378,7 @@ textarea {
 }
 
 #contact-btn {
-    max-width: 80px;
+    max-width: 30%;
     text-align: center;
     padding: .5em;
     border-radius: 3px;
@@ -342,7 +390,7 @@ textarea {
 
 #contact-btn:hover {
     cursor: pointer;
-    scale:1.1;
+    scale: 1.1;
     transition-duration: .3s;
 }
 
@@ -388,7 +436,7 @@ textarea {
 
 /* ! Scroll Scaling */
 .card {
-    transform: scale(0.9);
+    transform: scale(0.8);
     opacity: 0.7;
     transition: transform 0.4s ease, opacity 0.4s ease;
 }

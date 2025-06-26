@@ -37,13 +37,13 @@
         </nav>
     </header>
 
-
-
     <div class="form-ctn">
         <form action="https://formsubmit.co/1227096b5bca97c965f0b5b3604bbf89" method="POST">
 
-            <h1 class="h1">Contact</h1>
-            <input type="hidden" name="_next" value="http://127.0.0.1:5500/thanks.html">
+            <h1 id="typing-text" class="typing"><span id="typed-content"></span><span id="cursor">|</span></h1>
+
+
+            <input type="hidden" name="_next" value="https://andrewpoore.github.io/ap-portfolio/thanks.html">
 
             <div class="input">
                 <label for="name">Name:</label>
@@ -64,6 +64,27 @@
 
         </form>
     </div>
+
+    <script>
+        const message = "Design is a conversation. This is where it starts.";
+        const typedContent = document.getElementById("typed-content");
+        const cursor = document.getElementById("cursor");
+        let index = 0;
+        const speed = 80;
+
+        function type() {
+            if (index < message.length) {
+                typedContent.textContent += message.charAt(index);
+                index++;
+                setTimeout(type, speed);
+            } else {
+                // Optional: stop cursor blinking after typing
+                // cursor.style.animation = "none";
+            }
+        }
+
+        type();
+    </script>
 
 </body>
 
