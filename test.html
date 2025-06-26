@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: rgb(22, 22, 22);
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  isolation: isolate; /* Ensure layering */
+}
+
+.hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  object-fit: cover;
+  pointer-events: none;
+
+  /* 💡 GPU Rendering Boosters */
+  transform: translateZ(0);
+  will-change: transform, opacity, filter;
+  backface-visibility: hidden;
+  contain: paint;
+  perspective: 1000px;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 1;
+  color: #f7f7f7;
+  text-align: center;
+  padding: 2rem;
+  font-family: sans-serif;
+  text-shadow: 0 0 20px rgba(0,0,0,0.6);
+
+  /* Optional animation smoothing */
+  transform: translateZ(0);
+  will-change: transform, opacity;
+}
+
+    </style>
+</head>
+
+<body>
+
+    <div class="hero">
+        <dotlottie-player src="https://lottie.host/8900429c-bed1-40a5-9f00-22a335149736/ZcaMWUHqcl.lottie"
+            background="transparent" speed="1" loop autoplay class="hero-bg">
+        </dotlottie-player>
+
+        <div class="hero-text">
+            <h1>Centered, Smooth, and Sexy</h1>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+</body>
+
+</html>
