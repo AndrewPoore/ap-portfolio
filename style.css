@@ -14,7 +14,7 @@ body {
 }
 
 header {
-    max-width: 1200px;
+    max-width: 1440px;
     height: 100px;
     display: flex;
     margin: auto;
@@ -29,17 +29,24 @@ nav {
     letter-spacing: 3px;
 }
 
-nav a {
-    color: #f7f7f7;
-    text-decoration: none;
-}
-
 nav a:active {
     color: rgb(60, 161, 255);
 }
 
 nav>a {
     margin-left: 1.5em;
+}
+
+.menu-item {
+    display: inline-block;
+    text-decoration: none;
+    color: #f7f7f7;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.menu-item:hover {
+    transform: scale(1.1);
+    color: rgb(60, 161, 255);
 }
 
 span {
@@ -97,23 +104,23 @@ svg {
 }
 
 svg {
-    transition-duration: .25s;
+    transition-duration: .2s;
 }
 
 svg:hover {
     cursor: pointer;
     transform: scale(1.5);
-    transition: transform .25s ease;
+    transition: transform .2s ease;
 }
 
 svg:hover .st2 {
     stroke: rgb(60, 161, 255);
-    transition-duration: .25s;
+    transition-duration: .2s;
 }
 
 .menu-item:hover {
     color: rgb(60, 161, 255);
-    transition-duration: .25s;
+    transition-duration: .2s;
 }
 
 #monogram {
@@ -164,6 +171,8 @@ main {
     justify-content: center;
     align-items: flex-start;
 }
+
+
 
 /* ! Work */
 img {
@@ -216,6 +225,14 @@ img {
     color: rgb(60, 161, 255);
 }
 
+.card a {
+    text-decoration: none;
+}
+
+.card-title:hover {
+    color: rgb(60, 161, 255);
+}
+
 /* ! About */
 .about-ctn {
     max-width: 650px;
@@ -223,6 +240,7 @@ img {
 }
 
 .about {
+    font-size: 1.3em;
     display: flex;
     justify-self: center;
 }
@@ -232,7 +250,7 @@ img {
     justify-self: center;
     max-width: 400px;
     opacity: .1;
-    animation: fadeIn 2s ease-out forwards, flickerShadow 2s infinite;
+    animation: fadeIn 3s ease-in forwards, flickerShadow 2s infinite;
     filter: drop-shadow(-10px -10px 8px rgba(60, 161, 255, .35));
     transform: translateZ(0);
 }
@@ -290,14 +308,17 @@ img {
 } */
 
 /* ! Contact Page */
-.typing {
-    font-family: monospace, monospace;
-    font-size: 0;
-    max-width: 600px;
-    text-align: left;
-    white-space: normal;
-    overflow-wrap: break-word;
-    display: inline-block;
+.heading {
+  font-size: 2rem;
+  color: #f7f7f7;
+  max-width: 600px;
+  margin: 2rem auto;
+  white-space: normal;
+  overflow-wrap: break-word;
+  text-align: left;
+  line-height: 1.3;
+  position: relative;
+  margin: 0;
 }
 
 #typed-content,
@@ -308,10 +329,8 @@ img {
 }
 
 #cursor {
-    display: inline;
     animation: blink-caret 1s step-start infinite;
     user-select: none;
-    white-space: nowrap;
     color: rgb(60, 161, 255);
 }
 
