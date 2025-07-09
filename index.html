@@ -50,22 +50,11 @@
     <main class="gallery">
 
         <div class="card">
-            <a href="https://nutricost.com/pages/summer-kickoff-sale" target="_blank">
-                <div>
-                    <h3 class="card-title">Nutricost Summer Kickoff Sale</h3>
-                    <img src="assets/ntc-mockup.jpg" alt="Nutricost Summer Sale Mockup"></img>
-                </div>
-            </a>
-            <p>I built this sale landing page using Shogun Page Builder for Shopify. To boost user engagement, I added a
-                seamless wave divider animation with custom HTML and CSS, plus a sliding product row for extra
-                interactive depth.</p>
-        </div>
-
-        <div class="card">
             <a href="https://www.behance.net/gallery/226958779/Modern-Web-Design-for-a-Healthcare-IT-Brand"
                 target="_blank">
                 <div>
-                    <h3 class="card-title">Ryze Healthcare</h3>
+                    <h3 class="card-title">Ryze Healthcare<span class="external-link-icon"> ↗</span>
+                    </h3>
                     <img src="assets/rhc-mockup.jpg" alt="Ryze Healthcare Mockup"></img>
                 </div>
             </a>
@@ -78,10 +67,24 @@
         </div>
 
         <div class="card">
+            <a href="https://nutricost.com/pages/summer-kickoff-sale" target="_blank">
+                <div>
+                    <h3 class="card-title">Nutricost Summer Kickoff Sale<span class="external-link-icon"> ↗</span>
+                    </h3>
+                    <img src="assets/ntc-mockup.jpg" alt="Nutricost Summer Sale Mockup"></img>
+                </div>
+            </a>
+            <p>I built this sale landing page using Shogun Page Builder for Shopify. To boost user engagement, I added a
+                seamless wave divider animation with custom HTML and CSS, plus a sliding product row for extra
+                interactive depth.</p>
+        </div>
+
+        <div class="card">
             <a href="https://www.behance.net/gallery/223082425/Wellness-E-Commerce-Website-UXUI-Brand-Design"
                 target="_blank">
                 <div>
-                    <h3 class="card-title">Glow Mist Co</h3>
+                    <h3 class="card-title">Glow Mist Co<span class="external-link-icon"> ↗</span>
+                    </h3>
                     <img src="assets/gmc-mockup.jpg" alt="Glow Mist Co Home Page Mockup"></img>
                 </div>
             </a>
@@ -93,21 +96,10 @@
         </div>
 
         <div class="card">
-            <a href="https://www.behance.net/gallery/192209465/Business-Card-Typography-Design" target="_blank">
-                <div>
-                    <h3 class="card-title">Esthetics Business Card</h3>
-                    <img src="assets/sgsc-mockup.jpg" alt="Esthetics Business Card Mockup"></video>
-                </div>
-            </a>
-            <p>A minimal, typography-focused business card design for a Master Esthetician. I kept the layout clean and
-                balanced to reflect the professionalism and precision of the skincare services offered. The focus was on
-                creating a strong first impression through contrast, alignment, and a refined visual hierarchy.</p>
-        </div>
-
-        <div class="card">
             <a href="#" target="_blank">
                 <div>
-                    <h3 class="card-title">Bon Appetit</h3>
+                    <h3 class="card-title">Bon Appetit<span class="external-link-icon"> ↗</span>
+                    </h3>
                     <img src="assets/bon-appetit-mockup.jpg" alt="Bon Appetit Mockup"></img>
                 </div>
             </a>
@@ -120,9 +112,23 @@
         </div>
 
         <div class="card">
+            <a href="https://www.behance.net/gallery/192209465/Business-Card-Typography-Design" target="_blank">
+                <div>
+                    <h3 class="card-title">Esthetics Business Card<span class="external-link-icon"> ↗</span>
+                    </h3>
+                    <img src="assets/sgsc-mockup.jpg" alt="Esthetics Business Card Mockup"></video>
+                </div>
+            </a>
+            <p>A minimal, typography-focused business card design for a Master Esthetician. I kept the layout clean and
+                balanced to reflect the professionalism and precision of the skincare services offered. The focus was on
+                creating a strong first impression through contrast, alignment, and a refined visual hierarchy.</p>
+        </div>
+
+        <div class="card">
             <a href="https://www.behance.net/gallery/169099021/Exhibition-Brochure-Design" target="_blank">
                 <div>
-                    <h3 class="card-title">Exhibition Brochure</h3>
+                    <h3 class="card-title">Exhibition Brochure<span class="external-link-icon"> ↗</span>
+                    </h3>
                     <img src="assets/art-exhibition-mockup.jpg" alt="Exhibition Brochure Mockup"></img>
                 </div>
             </a>
@@ -142,15 +148,15 @@
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('in-view');
-                } else {
-                    entry.target.classList.remove('in-view');
+                    observer.unobserve(entry.target); // 👈 prevents repeated flickering
                 }
             });
         }, {
-            threshold: 0.75 // Trigger when 75% of the card is in view
+            threshold: 0.75
         });
 
         cards.forEach(card => observer.observe(card));
+
     </script>
 </body>
 

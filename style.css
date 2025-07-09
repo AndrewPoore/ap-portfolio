@@ -234,6 +234,10 @@ img {
 }
 
 /* ! About */
+.about-main {
+    margin: 2em;
+}
+
 .about-ctn {
     max-width: 650px;
     margin: 0 2em;
@@ -461,4 +465,29 @@ textarea {
 .card.in-view {
     transform: scale(1);
     opacity: 1;
+}
+
+.card:active {
+  background-color: rgb(40, 40, 40);
+  transition: background-color 0.2s ease;
+}
+
+.card img {
+  transition: transform 0.3s ease;
+}
+.card:hover img {
+  transform: scale(1.02);
+}
+
+.card-title span {
+    margin: 0;
+}
+
+.external-link-icon {
+  font-size: 0.9em;
+  margin-left: 0.3em;
+  opacity: 0.6;
+}
+.card a:hover .external-link-icon {
+  opacity: 1;
 }
