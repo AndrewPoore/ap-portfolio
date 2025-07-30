@@ -391,7 +391,7 @@ textarea {
 
 form input,
 textarea {
-    outline-color: rgb(60, 161, 255);
+    outline-color: #3ca1ff;
 }
 
 .input,
