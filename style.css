@@ -228,7 +228,8 @@ img {
     transition-duration: .2s;
 }
 
-.card-title:hover, .card-title:active {
+.card-title:hover,
+.card-title:active {
     text-decoration: underline;
     color: rgba(60, 161, 255, .6);
     transition-duration: .2s;
@@ -306,6 +307,8 @@ form {
     padding: 1.5em;
     border-radius: 10px;
     box-shadow: -8px 8px 8px rgba(0, 0, 0, 0.25);
+    animation: hoverLanding 0.9s ease-out forwards;
+    transform-origin: center center;
 }
 
 .form-ctn {
@@ -314,7 +317,7 @@ form {
 
 form,
 #contact-btn {
-    font-size: 24px;
+    font-size: 18px;
 }
 
 form,
@@ -345,7 +348,7 @@ textarea {
 }
 
 #contact-btn {
-    max-width: 30%;
+    max-width: 20%;
     text-align: center;
     padding: .5em;
     border-radius: 3px;
@@ -364,6 +367,27 @@ textarea {
 .thanks {
     max-width: 1000px;
     padding: 1em;
+}
+
+@keyframes hoverLanding {
+    0% {
+    transform: translateY(40px) scale(1.15);
+    opacity: 0;
+    filter: blur(2px);
+    box-shadow: -12px 12px 20px rgba(0, 0, 0, 0.45);
+}
+
+60% {
+    transform: translateY(0px) scale(1);
+    opacity: 1;
+    filter: blur(0.5px);
+    box-shadow: -10px 10px 14px rgba(0, 0, 0, 0.3);
+}
+
+100% {
+    filter: blur(0);
+    box-shadow: -8px 8px 8px rgba(0, 0, 0, 0.25);
+}
 }
 
 /* ! Hero Section */
@@ -488,8 +512,8 @@ textarea {
 
 /* !Mobile Media Query */
 @media screen and (max-width: 650px) {
- .hero {
-    display:flex;
-    flex-direction: column-reverse;
-}   
+    .hero {
+        display: flex;
+        flex-direction: column-reverse;
+    }
 }
