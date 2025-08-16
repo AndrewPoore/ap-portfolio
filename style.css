@@ -342,6 +342,10 @@ textarea {
     outline-color: #3ca1ff;
 }
 
+textarea {
+  resize: vertical;
+}
+
 .input, #contact-btn {
     margin-top: 1em;
 }
