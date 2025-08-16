@@ -342,15 +342,14 @@ textarea {
     outline-color: #3ca1ff;
 }
 
-.input,
-#contact-btn {
-    margin: 1em 0;
+.input, #contact-btn {
+    margin-top: 1em;
 }
 
 #contact-btn {
-    max-width: 20%;
-    text-align: center;
-    padding: .5em;
+    align-self: flex-start;
+    text-align: left;
+    padding: .5em 1em;
     border-radius: 3px;
     border-style: none;
     color: #f7f7f7;
